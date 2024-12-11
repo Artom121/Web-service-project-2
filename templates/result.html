@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-сервис с прогнозом погоды для заданного маршрута</title>
+</head>
+<body>
+    <h1>Прогноз погоды для маршрута {{ start_city }} - {{ end_city }}</h1>
+
+    <div>
+        <h2>Погода в {{ start_city }}:</h2>
+        <p>Температура: {{ start_data['Temperature'] }} °C</p>
+        <p>Скорость ветра: {{ start_data['Speed'] }} км/ч</p>
+        <p>Влажнсоть: {{ start_data['Humidity'] }} %</p>
+        <p>Вероятность осадков: {{ start_data['RainProbability'] }} %</p>
+        <p>Оценка погодных условий: {{ start_assessment }}</p>
+    </div>
+
+    <br>
+
+    <div>
+        <h2>Погода в {{ end_city }}:</h2>
+        <p>Температура: {{ end_data['Temperature'] }} °C</p>
+        <p>Скорость ветра: {{ end_data['Speed'] }} км/ч</p>
+        <p>Влажнсоть: {{ end_data['Humidity'] }} %</p>
+        <p>Вероятность осадков: {{ end_data['RainProbability'] }} %</p>
+        <p>Оценка погодных условий: {{ end_assessment }}</p>
+    </div>
+</body>
+</html>

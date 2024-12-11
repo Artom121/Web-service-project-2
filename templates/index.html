@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 12</title>
+</head>
+<body>
+    {% if error %}
+        <div style="color: red;">{{ error }}</div>
+    {% endif %}
+    <form method="POST">
+        <label for="start">Начальный пункт:</label>
+        <input type="text" id="start" name="start" required>
+        <br>
+        <label for="end">Конечный пункт:</label>
+        <input type="text" id="end" name="end" required>
+        <br>
+        <button type="submit">Получить прогноз погоды</button>
+    </form>
+</body>
+</html>
